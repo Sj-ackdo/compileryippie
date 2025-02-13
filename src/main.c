@@ -1,8 +1,12 @@
 //hoi
 #include <stdio.h>
+char inp[5] = "x";
 
 int main() {
-
-    printf("meow meow meow meow");
-
+    while (inp != "RUN"){
+        cli_input();
+        
+    };
 };
+
+void cli_input (){};
