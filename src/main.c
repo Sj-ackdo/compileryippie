@@ -2,21 +2,22 @@
 #include <stdlib.h>
 #include <string.h>
 
+char user_inputraw[99];
 char user_input[99];
 char stop_sign[3] = "RUN";
 int check_end = 0;
 
 void cli_input (){                                          //rn it detects input and sisplays, also breaks at "RUN"
     while (check_end == 0){
-        fgets(user_input, sizeof(user_input), stdin);
-        int len = strlen(user_input);
-        user_input[len-1] = '\0';
-        int cmpstring = strcmp(user_input, stop_sign);
+        fgets(user_inputraw, sizeof(user_inputraw), stdin);
+        int len = strlen(user_inputraw);
+        user_inputraw[len-1] = '\0';
+        int cmpstring = strcmp(user_inputraw, stop_sign);
         if (cmpstring == 0){
             check_end = 1;
             exit(0);
         };
-        printf("%s\n",user_input);
+        printf("%s\n",user_inputraw);
     };
 };
 
