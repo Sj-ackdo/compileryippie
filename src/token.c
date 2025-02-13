@@ -4,16 +4,27 @@
 
 char test_code[] = "let x = 5 |";
 
-void space_delete() {
-    char input[100] = "let x = 5 |", output[100];
-    int i, j = 0;
+#define MAX_TOKENS 100
 
+typedef struct {
+    char tokens[MAX_TOKENS][100];
+    int count;
+} TokenArray;
+
+TokenArray token_array;
+
+void space_delete() {
+    token_array.count = 0;
     char* token = strtok(test_code, " ");
-    while (token != NULL) {
-        printf(" % s\n", token);
+    while (token != NULL && token_array.count < MAX_TOKENS) {
+        strcpy(token_array.tokens[token_array.count++], token);
         token = strtok(NULL, " ");
     }
-};
+
+    for (int i = 0; i < token_array.count; i++) {
+        printf("%s\n", token_array.tokens[i]);
+    }
+}
 
 void token(){
         
@@ -36,5 +47,29 @@ int main(){
 // for (i = 0; i < strlen(test_code); ++i){
 //     if(test_code[i] == ' ') {
 //         printf("%c %d\n", test_code[i-1], i);
+//     }
+// }
+
+
+
+// #define MAX_TOKENS 100
+
+// typedef struct {
+//     char tokens[MAX_TOKENS][100];
+//     int count;
+// } TokenArray;
+
+// TokenArray token_array;
+
+// void space_delete() {
+//     token_array.count = 0;
+//     char* token = strtok(test_code, " ");
+//     while (token != NULL && token_array.count < MAX_TOKENS) {
+//         strcpy(token_array.tokens[token_array.count++], token);
+//         token = strtok(NULL, " ");
+//     }
+
+//     for (int i = 0; i < token_array.count; i++) {
+//         printf("%s\n", token_array.tokens[i]);
 //     }
 // }
