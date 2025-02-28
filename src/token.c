@@ -2,7 +2,7 @@
 #include <string.h>
 //#include <main.c>
 
-char test_code[] = "let x = 5 |";
+char test_code[] = "int let x = 5 |";
 
 #define MAX_TOKENS 100
 
