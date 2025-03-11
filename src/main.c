@@ -15,13 +15,13 @@ void cli_input (){                                          //rn it detects inpu
         FILE *fp = fopen("filename.txt", "w"); // dit t/m line 26 is om de input van de user in een file te zetten = temp
         if (fp == NULL) { 
             printf("Error opening file!\n"); 
-            return 1; // Exit the program with an error code 
+            perror("Error"); // Exit the program with an error code 
         } 
         int result = fputs(user_inputraw, fp); 
         if (result == EOF) { 
             printf("Error writing to file!\n"); 
             fclose(fp); // Close the file even on error 
-            return 1; 
+            perror("Error"); 
         } 
         fclose(fp); 
         int cmpstring = strcmp(user_inputraw, stop_sign);
