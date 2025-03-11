@@ -2,7 +2,8 @@
 #include <string.h>
 //#include <main.c>
 
-char test_code[] = "int let x = 5 |";
+char test_code[] = "int let x = 5 | RUN";
+int amount_tok;
 
 #define MAX_TOKENS 100
 
@@ -23,17 +24,18 @@ void space_delete() {
 
     for (int i = 0; i < token_array.count; i++) {
         printf("%s\n", token_array.tokens[i]);
+        amount_tok++;
     }
 }
 
 void token(){
-        
+        //for(i = 0; i < sizeof(token_array); i++){};
 
 };
 
 int main(){
     space_delete();
-
+    printf("%d",sizeof(amount_tok));
 };
 
 

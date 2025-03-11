@@ -26,4 +26,5 @@ This piece of code will make an integer variable called x and assign the value 5
 `x` Variable name</br>
 `=` points to variable value </br>
 `|` End this line of code </br>
-`RUN` Run the piece of code inserted
+`RUN` Run the piece of code inserted</br>
+All other keywords can be found in [the keyword document](keyword.md).
