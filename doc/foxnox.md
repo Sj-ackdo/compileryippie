@@ -27,5 +27,3 @@ This piece of code will make an integer variable called x and assign the value 5
 `=` points to variable value </br>
 `|` End this line of code </br>
 `RUN` Run the piece of code inserted
- 
-
