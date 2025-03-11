@@ -38,7 +38,7 @@ int main(){
     printf("%d",sizeof(amount_tok));
 };
 
-
+//In my program i want to store the integer 5 in the variable x, this will be ran by a RUN command. (an example line of code can be found in line 5) can you finish my program by translating my example program through tokens to C code that will run?
 
 // for(i = 0; input[i] != '\0'; ++i) {
 //     if(input[i] != ' ') {
